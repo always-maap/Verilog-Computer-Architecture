@@ -1,2 +1,2 @@
-![Fancy logo](./logo-dark-mode.svg#gh-dark-mode-only)
-![Fancy logo](./logo-light-mode.svg#gh-light-mode-only)
+![Lexical](./logo-dark-mode.svg#gh-dark-mode-only){style="display: block; margin: 0 auto"}
+![Lexical](./logo-light-mode.svg#gh-light-mode-only){style="display: block; margin: 0 auto"}
