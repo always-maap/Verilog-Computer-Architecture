@@ -1,6 +1,6 @@
 module ShiftLeft2(in, out);
-    input[31:0] in;
-    output reg[31:0] out;
+    input [31:0] in;
+    output reg [31:0] out;
     
     always @(in) begin
         out = in << 2;
@@ -8,7 +8,7 @@ module ShiftLeft2(in, out);
 endmodule
 
 module ShiftLeft2_test;
-    reg[31:0] in;
+    reg [31:0] in;
     
     wire [31:0] out;
     

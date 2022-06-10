@@ -13,7 +13,7 @@ module PC(clock, reset, in, out);
 endmodule
 
 module PC_test;
-    reg[31:0] in;
+    reg [31:0] in;
     reg clock = 1;
     reg reset = 0;
     
