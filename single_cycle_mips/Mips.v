@@ -6,11 +6,13 @@ module Mips(clock, reset, PCout, instruction);
     PC pc(clock, reset, PCin, PCout);
     
     output wire [31:0] instruction;
-    InstMem instMem(clock, PCin, instruction);
+    InstMem instMem(clock, PCout, instruction);
+    
+    assign PCin = PCout;
 endmodule
 
 module Mips_test;
-    reg clock, reset;
+    reg clock = 1, reset = 1;
     
     always #10 clock = ~clock;
     
@@ -20,11 +22,9 @@ module Mips_test;
     Mips mips(clock, reset, PCout, instruction);
     
     initial begin
-        // initialize all variables
-        clock = 0; reset = 1;
+        #10
+        reset = 0;
         
-        // wait for first negative edge before de-asserting reset
-        @(negedge clock) reset = 0;
         #1000
         $finish;
     end
